@@ -83,6 +83,26 @@ def lucas(n) :
         return (f'Lucas sequence upto the position {n} is: {series}')
 
 
+# def calculate_sum_series(n,a,b):
+#     if n <= 1:
+#         return a
+#     elif n == 2:
+#         return b
+#     else:
+#        return(calculate_sum_series(n-1) + calculate_sum_series(n-2))
+
+# def sum_series(n):
+#     series =[]
+#     if type(n) != int:
+#         return ("Please enter a positive integer")
+#     elif n <= 0:
+#         return ("Please enter a positive integer")
+#     else:
+#         for i in range(n):
+#             series.append(calculate_sum_(i))
+#         return (f'The sequence upto the position {n} is: {series}')
+
+
 def sum_series(n, a=0, b=1):
     '''
     Creat a series starts with the value a and b, then to calculate the next value it summing the previous 2 values and keep doing this untill the nth position
@@ -110,3 +130,4 @@ def sum_series(n, a=0, b=1):
                 b = c
                 series.append(b)
         return (f'The sequence upto the position {n} is: {series}')
+
