@@ -1,12 +1,22 @@
 
 def calculate_fibonacci(n):
-   if n <= 1:
+    '''
+    Creat a fibonacci series
+    input --> the currennt nth position (integer number)
+    output --> the value of the nth potion in a fibonacci series
+    '''
+    if n <= 1:
        return n
-   else:
+    else:
        return(calculate_fibonacci(n-1) + calculate_fibonacci(n-2))
 
 
 def fibonacci(n):
+    '''
+    Creat a fibonacci series to the nth position
+    input --> the last nth position (integer number)
+    output --> fibonacci series
+    '''
     series =[]
     if type(n) != int:
         return ("Please enter a positive integer")
@@ -21,7 +31,7 @@ def fibonacci(n):
 
 
 # def calculate_lucas(n):
-#     if n == 1:
+#     if n <= 1:
 #         return 2
 #     elif n == 2:
 #         return 1
@@ -41,6 +51,11 @@ def fibonacci(n):
 
 
 def lucas(n) :
+    '''
+    Creat a lucas series to the nth position
+    input --> the last nth position (integer number)
+    output --> lucas series
+    '''
     if type(n) != int:
         return ("Please enter a positive integer")
     elif n <= 0:
@@ -67,7 +82,13 @@ def lucas(n) :
                 series.append(b)
         return (f'Lucas sequence upto the position {n} is: {series}')
 
+
 def sum_series(n, a=0, b=1):
+    '''
+    Creat a series starts with the value a and b, then to calculate the next value it summing the previous 2 values and keep doing this untill the nth position
+    input --> the last nth position (int), the first value of series (int), the second value of series (int)
+    output --> series
+    '''
     if type(n) != int:
         return ("Please enter a positive integer")
     elif n <= 0:
